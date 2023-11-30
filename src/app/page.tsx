@@ -18,7 +18,7 @@ const perks = [
       'Every asset on our platform is verified by our team to ensure our highest quality standards. Not happy? We offer a 30-day refund guarantee.',
   },
   {
-    name: 'For the Planet',
+    name: 'Highly Secure Products',
     Icon: Leaf,
     description:
       "We've pledged 1% of sales to the preservation and restoration of the natural environment.",
@@ -31,8 +31,8 @@ export default function Home() {
       <MaxWidthWrapper>
         <div className='py-20 mx-auto text-center flex flex-col items-center max-w-3xl'>
           <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
-            Your marketplace for high-quality{' '}
-            <span className='text-blue-600'>digital assets</span>.
+            Remarket the leading marketplace for
+            <span className='text-blue-600'> profelect-4</span>.
           </h1>
           <p className='mt-6 text-lg max-w-prose text-muted-foreground'>
             Welcome to ProfElect-Marketplace. Every asset on our platform is

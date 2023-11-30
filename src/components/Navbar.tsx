@@ -1,17 +1,17 @@
-import Link from 'next/link'
-import MaxWidthWrapper from './MaxWidthWrapper'
-import { Icons } from './Icons'
-import NavItems from './NavItems'
-import { buttonVariants } from './ui/button'
-import Cart from './Cart'
-import { getServerSideUser } from '@/lib/payload-utils'
-import { cookies } from 'next/headers'
-import UserAccountNav from './UserAccountNav'
-import MobileNav from './MobileNav'
+import Link from 'next/link';
+import MaxWidthWrapper from './MaxWidthWrapper';
+import { Icons } from './Icons';
+import NavItems from './NavItems';
+import { buttonVariants } from './ui/button';
+import Cart from './Cart';
+import { getServerSideUser } from '@/lib/payload-utils';
+import { cookies } from 'next/headers';
+import UserAccountNav from './UserAccountNav';
+import MobileNav from './MobileNav';
 
 const Navbar = async () => {
-  const nextCookies = cookies()
-  const { user } = await getServerSideUser(nextCookies)
+  const nextCookies = cookies();
+  const { user } = await getServerSideUser(nextCookies);
 
   return (
     <div className='bg-white sticky z-50 top-0 inset-x-0 h-16'>
@@ -39,15 +39,12 @@ const Navbar = async () => {
                       className={buttonVariants({
                         variant: 'ghost',
                       })}>
-                      Sign in
+                      SignIn
                     </Link>
                   )}
 
                   {user ? null : (
-                    <span
-                      className='h-6 w-px bg-gray-200'
-                      aria-hidden='true'
-                    />
+                    <span className='h-6 w-px bg-gray-200' aria-hidden='true' />
                   )}
 
                   {user ? (
@@ -58,15 +55,12 @@ const Navbar = async () => {
                       className={buttonVariants({
                         variant: 'ghost',
                       })}>
-                      Create account
+                      SignUp
                     </Link>
                   )}
 
                   {user ? (
-                    <span
-                      className='h-6 w-px bg-gray-200'
-                      aria-hidden='true'
-                    />
+                    <span className='h-6 w-px bg-gray-200' aria-hidden='true' />
                   ) : null}
 
                   {user ? null : (
@@ -79,7 +73,7 @@ const Navbar = async () => {
                   )}
 
                   <div className='ml-4 flow-root lg:ml-6'>
-                    <Cart />
+                    Cart: <Cart />
                   </div>
                 </div>
               </div>
@@ -88,7 +82,7 @@ const Navbar = async () => {
         </MaxWidthWrapper>
       </header>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
